@@ -60,12 +60,32 @@ ul {
     margin: 0 .5rem;
     padding: 1rem;
     text-transform: uppercase;
-    transition: all .5s ease-in-out;
+    /* transition: all .5s ease-in-out; */
 }
 
-.nav-item:hover {
-    border-bottom: 1px solid #2574a9;
+.nav-item > .la-user-tie {
+    color: #2574a9;
+    transition: color .5s ease;
 }
+
+.nav-item > .la-user-tie {
+    color: #f4f4f4;
+}
+
+.item-outlined {
+    border: 1px solid #2574a9;
+    transition: all .5s ease;
+}
+
+.item-outlined:hover {
+    background-color: #2574a9;
+    color: #f4f4f4;
+}
+
+
+/* .nav-item:hover { */
+    /* border-bottom: 1px solid #2574a9; */
+/* } */
 
 /* HERO */
 
@@ -114,9 +134,33 @@ ul {
 .search-header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 30vh;
+}
+
+.search-header > .tabs {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.search-header > .tabs > .tab-title {
+    font-size: 1.3em;
+}
+
+.tabs .tab {
+    cursor: pointer;
+}
+
+.sub-tabs {
+    display: none;
+}
+
+#employer-tab:hover > .sub-tabs {
+    display: block;
 }
 
 
@@ -124,7 +168,17 @@ ul {
 /* ABOUT PAGE */
 
 #about {
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+}
+
+#about h2 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
 
@@ -139,6 +193,7 @@ ul {
 #listings {
     display: grid;
     grid-template-columns: 4fr 8fr;
+    border-top: .3rem solid #e4f1fe;
 }
 
 .cards {
@@ -218,6 +273,34 @@ ul {
 }
 
 
+
+/* FORMS */ 
+
+.form-group {
+    display: flex;
+    margin: 1.4rem 0;
+    width: 100%;
+}
+
+.form-group input {
+    width: 100%;
+    margin-right: .9rem;
+    padding: .8rem;
+    border-radius: 0;
+    border: none;
+}
+
+.btn-search {
+    background-color: #2574a9;
+    font-size: 1.4em;
+    border: none;
+    padding: .8rem;
+}
+
+.btn-search > .la-search {
+    color: #f4f4f4;
+}
+
 /** UTILS **/ 
 
 .la-arrow-right {
@@ -227,6 +310,10 @@ ul {
 
 .la-arrow-right:hover {
     font-size: 1.6em;
+}
+
+.la-briefcase {
+    font-size: 1.2em;
 }
 
 .las {
@@ -242,15 +329,16 @@ ul {
     letter-spacing: .1em;
     height: 3rem;
     width: 12rem;
+    margin: 1rem 0;
     padding: .5rem 3rem;
     border: none;
-    transition: all .1s ease-in-out;
+    /* transition: all .1s ease-in-out; */
 }
 
-.btn:hover {
-   height: 3.3rem;
-   width: 12.3rem;
-}
+/* .btn:hover { */
+/*    height: 3.3rem; */
+/*    width: 12.3rem; */
+/* } */
 
 
 
